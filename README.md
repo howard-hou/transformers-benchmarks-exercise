@@ -1,3 +1,17 @@
+# Exerise for Transformers Benchmarks
+
+I answer the 8 questions raised by Li Mu in the [video](https://www.bilibili.com/video/BV1fG411G7eH). Results are shown in [transformers_exercise.ipynb](transformers_exercise.ipynb). 
+
+Brief summary:
+1. comparison of three parallel paradigms， data parallelism(DP)\ tensor parallelism(TP) \ pipeline parallelism(PP): 
+- TFLOPS: pipeline parallelism > data parallelism > tensor parallelism
+- Batch size: tensor parallelism > pipeline parallelism > data parallelism
+- Model size: tensor parallelism > pipeline parallelism > data parallelism
+2. DeepSpeed speed up: Zero-2 > Zero-1 > PP > DP > TP
+3. Largest model in my machine(two 3090 with 24GB memory):
+- 2.7B neo-gpt can be ran by TP + Zero-2 + grad checkpoint
+- 13B opt-gpt can be ran by Zero-offload
+
 # Transformers Benchmarks
 
 We benchmark real [TeraFLOPS](https://en.wikipedia.org/wiki/FLOPS) that training Transformer models can achieve on various GPUs, including single GPU, multi-GPUs, and multi-machines. It helps you to estimate how many machine times you need to train your large-scale Transformer models. 
