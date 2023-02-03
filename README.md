@@ -4,13 +4,13 @@ I answer the 8 questions raised by Li Mu in the [video](https://www.bilibili.com
 
 Brief summary:
 1. comparison of three parallel paradigms， data parallelism(DP)\ tensor parallelism(TP) \ pipeline parallelism(PP): 
-   - TFLOPS: pipeline parallelism > data parallelism > tensor parallelism
-   - Batch size: tensor parallelism > pipeline parallelism > data parallelism
-   - Model size: tensor parallelism > pipeline parallelism > data parallelism
+ - TFLOPS: pipeline parallelism > data parallelism > tensor parallelism
+ - Batch size: tensor parallelism > pipeline parallelism > data parallelism
+ - Model size: tensor parallelism > pipeline parallelism > data parallelism
 2. DeepSpeed speed up: Zero-2 > Zero-1 > PP > DP > TP
 3. Largest model in my machine(two 3090 with 24GB memory):  
-   - 2.7B neo-gpt can be ran by TP + Zero-2 + grad checkpoint
-   - 13B opt-gpt can be ran by Zero-offload
+ - 2.7B neo-gpt can be ran by TP + Zero-2 + grad checkpoint
+ - 13B opt-gpt can be ran by Zero-offload
 
 # Transformers Benchmarks
 
